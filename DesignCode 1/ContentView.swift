@@ -10,44 +10,41 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         ZStack {
-            VStack {
-                Spacer()
-            } //: VSTACK
-            .frame(width: 300, height: 220)
-            .background(Color.blue)
-            .cornerRadius(20)
-            .shadow(radius: 20)
-            .offset(x: 0, y: -20)
+            TitleView()
+                .blur(radius: 20)
             
-            VStack {
-                HStack {
-                    VStack(alignment: .leading) {
-                        Text("UI Design")
-                            .font(.title)
-                            .fontWeight(.semibold)
-                            .foregroundColor(Color.white)
-                        Text("certificate")
-                            .foregroundColor(Color("accent"))
-                    } //: VSTACK
-                    
-                    Spacer()
-                    
-                    Image("Logo1")
-                } //: HSTACK
+            BackCardView()
+                .background(Color("card4"))
+                .cornerRadius(20)
+                .shadow(radius: 20)
+                .offset(x: 0, y: -40)
+                .scaleEffect(0.9)
+                .rotationEffect(.degrees(10))
+                .rotation3DEffect(Angle(degrees: 10), axis: (x: 10.0, y: 0.0, z: 0.0))
+                .blendMode(.hardLight)
+                
+            BackCardView()
+                .background(Color("card3"))
+                .cornerRadius(20)
+                .shadow(radius: 20)
+                .offset(x: 0, y: -20)
+                .scaleEffect(0.95)
+                .rotationEffect(.degrees(5))
+                .rotation3DEffect(Angle(degrees: 5), axis: (x: 10.0, y: 0.0, z: 0.0))
+                .blendMode(.hardLight)
+            
+            CardView()
+                .blendMode(.hardLight)
+            
+            BottomCardView()
+                .padding(.top, 8)
                 .padding(.horizontal, 20)
-                .padding(.top, 20)
-                
-                Spacer()
-                
-                Image("Card1")
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .frame(width: 300.0, height: 110.0, alignment: .top)
-            } //: VSTACK
-            .frame(width: 340.0, height: 220.0)
-            .background(Color.black)
-            .cornerRadius(20)
-            .shadow(radius: 20)
+                .frame(maxWidth: .infinity)
+                .background(Color.white)
+                .cornerRadius(30)
+                .shadow(radius: 20)
+                .offset(x: 0.0, y: 500)
+            
         } //: ZSTACK
     } //: BODY
 }
@@ -56,4 +53,83 @@ struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
     }
+}
+
+struct TitleView: View {
+    var body: some View {
+        VStack {
+            HStack {
+                Text("Certificates")
+                    .font(.title)
+                    .fontWeight(.bold)
+                Spacer()
+            } //: HSTACK
+            .padding()
+            
+            Image("Background1")
+            
+            Spacer()
+        } //: VSTACK
+    } //: BODY
+}
+
+struct BackCardView: View {
+    var body: some View {
+        VStack {
+            Spacer()
+        } //: VSTACK
+        .frame(width: 340, height: 220)
+    } //: BODY
+}
+
+struct CardView: View {
+    var body: some View {
+        VStack {
+            HStack {
+                VStack(alignment: .leading) {
+                    Text("UI Design")
+                        .font(.title)
+                        .fontWeight(.semibold)
+                        .foregroundColor(Color.white)
+                    Text("certificate")
+                        .foregroundColor(Color("accent"))
+                } //: VSTACK
+                
+                Spacer()
+                
+                Image("Logo1")
+            } //: HSTACK
+            .padding(.horizontal, 20)
+            .padding(.top, 20)
+            
+            Spacer()
+            
+            Image("Card1")
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .frame(width: 300.0, height: 110.0, alignment: .top)
+        } //: VSTACK
+        .frame(width: 340.0, height: 220.0)
+        .background(Color.black)
+        .cornerRadius(20)
+        .shadow(radius: 20)
+    } //: BODY
+}
+
+struct BottomCardView: View {
+    var body: some View {
+        VStack(spacing: 20) {
+            Rectangle()
+                .frame(width: 40, height: 5)
+                .cornerRadius(3)
+                .opacity(0.1)
+            
+            Text("This certificate is proof that Meng To has achieved the UI Design course with approval from a Design+Code instructor.")
+                .multilineTextAlignment(.center)
+                .font(.subheadline)
+                .lineSpacing(5)
+            
+            Spacer()
+        } //: VSTACK
+    } //: BODY
 }
