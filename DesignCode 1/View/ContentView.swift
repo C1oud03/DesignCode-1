@@ -130,7 +130,7 @@ struct TitleView: View {
         VStack {
             HStack {
                 Text("Certificates")
-                    .font(.title)
+                    .font(.system(.title, design: .rounded))
                     .fontWeight(.bold)
                 Spacer()
             } //: HSTACK
@@ -157,7 +157,7 @@ struct CardView: View {
             HStack {
                 VStack(alignment: .leading) {
                     Text("UI Design")
-                        .font(.title)
+                        .font(.system(.title, design: .rounded))
                         .fontWeight(.semibold)
                         .foregroundColor(Color.white)
                     Text("certificate")
@@ -191,7 +191,7 @@ struct BottomCardView: View {
             
             Text("This certificate is proof that Meng To has achieved the UI Design course with approval from a Design+Code instructor.")
                 .multilineTextAlignment(.center)
-                .font(.subheadline)
+                .font(.system(.subheadline, design: .rounded))
                 .lineSpacing(5)
             
             Spacer()

@@ -50,7 +50,7 @@ struct HomeView: View {
                 }) {
                     Image(systemName: "bell")
                         .renderingMode(.original)
-                        .font(.system(size: 16, weight: .medium))
+                        .font(.system(size: 16, weight: .medium, design: .rounded))
                         .frame(width: 36, height: 36)
                         .background(Color.white)
                         .clipShape(Circle())
