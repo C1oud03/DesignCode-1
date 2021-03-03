@@ -56,18 +56,3 @@ struct Home_Previews: PreviewProvider {
         Home()
     }
 }
-
-struct AvatarView: View {
-    @Binding var showProfile: Bool
-    
-    var body: some View {
-        Button(action: {
-            showProfile.toggle()
-        }) {
-            Image("Avatar")
-                .resizable()
-                .frame(width: 36, height: 36)
-                .clipShape(Circle())
-        } //: BUTTON
-    } //: BODY
-}

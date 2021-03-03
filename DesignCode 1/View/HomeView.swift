@@ -7,6 +7,30 @@
 
 import SwiftUI
 
+let sectionData = [
+    Section(
+        title: "Prototype designs in SwiftUI",
+        logo: "Logo1",
+        text: "18 Sections",
+        image: Image("Card1"),
+        color: Color("card1")
+    ),
+    Section(
+        title: "Build a SwiftUI App",
+        logo: "Logo1",
+        text: "20 Sections",
+        image: Image("Card2"),
+        color: Color("card2")
+    ),
+    Section(
+        title: "SwiftUI Advanced",
+        logo: "Logo1",
+        text: "20 Sections",
+        image: Image("Card3"),
+        color: Color("card3")
+    )
+]
+
 struct HomeView: View {
     @Binding var showProfile: Bool
     
@@ -26,8 +50,8 @@ struct HomeView: View {
             
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(spacing: 30) {
-                    ForEach(0 ..< 5) { item in
-                        SectionView()
+                    ForEach(sectionData) { item in
+                        SectionView(section: item)
                     } //: LOOP
                 } //: HSTACK
                 .padding(30)
@@ -45,24 +69,41 @@ struct HomeView_Previews: PreviewProvider {
     }
 }
 
+struct AvatarView: View {
+    @Binding var showProfile: Bool
+    
+    var body: some View {
+        Button(action: {
+            showProfile.toggle()
+        }) {
+            Image("Avatar")
+                .resizable()
+                .frame(width: 36, height: 36)
+                .clipShape(Circle())
+        } //: BUTTON
+    } //: BODY
+}
+
 struct SectionView: View {
+    var section: Section
+    
     var body: some View {
         VStack {
             HStack(alignment: .top) {
-                Text("Prototype designs in SwiftUI")
+                Text(section.title)
                     .font(.system(size: 24, weight: .bold, design: .rounded))
                     .frame(width: 160, alignment: .leading)
                     .foregroundColor(.white)
                 
                 Spacer()
                 
-                Image("Logo1")
+                Image(section.logo)
             } //: HSTACK
             
-            Text("18 Sections".uppercased())
+            Text(section.text.uppercased())
                 .frame(maxWidth: .infinity, alignment: .leading)
             
-            Image("Card1")
+            section.image
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 210)
@@ -70,8 +111,17 @@ struct SectionView: View {
         .padding(.top, 20)
         .padding(.horizontal, 20)
         .frame(width: 275, height: 275)
-        .background(Color("card1"))
+        .background(section.color)
         .cornerRadius(30)
-        .shadow(color: Color("card1").opacity(0.4), radius: 20, x: 0, y: 20)
-    }
+        .shadow(color: section.color.opacity(0.4), radius: 20, x: 0, y: 20)
+    } //: BODY
+}
+
+struct Section: Identifiable {
+    var id = UUID()
+    var title: String
+    var logo: String
+    var text: String
+    var image: Image
+    var color: Color
 }
