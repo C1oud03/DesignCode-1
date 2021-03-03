@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+let screen = UIScreen.main.bounds
+
 struct ContentView: View {
     @State var show = false
     @State var viewState = CGSize.zero
