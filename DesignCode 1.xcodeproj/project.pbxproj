@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		701E9A1425EF87E400D81FA2 /* UpdateDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 701E9A1325EF87E400D81FA2 /* UpdateDetail.swift */; };
+		701E9A1725EF8B2D00D81FA2 /* UpdateStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 701E9A1625EF8B2D00D81FA2 /* UpdateStore.swift */; };
 		70201C8325EF5898007C0875 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70201C8225EF5898007C0875 /* HomeView.swift */; };
 		708762AD25EF727F003144C5 /* UpdateList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 708762AC25EF727F003144C5 /* UpdateList.swift */; };
 		70A7179325ED4F7100E91380 /* DesignCode_1App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A7179225ED4F7100E91380 /* DesignCode_1App.swift */; };
@@ -20,6 +21,7 @@
 
 /* Begin PBXFileReference section */
 		701E9A1325EF87E400D81FA2 /* UpdateDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateDetail.swift; sourceTree = "<group>"; };
+		701E9A1625EF8B2D00D81FA2 /* UpdateStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateStore.swift; sourceTree = "<group>"; };
 		70201C8225EF5898007C0875 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		708762AC25EF727F003144C5 /* UpdateList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateList.swift; sourceTree = "<group>"; };
 		70A7178F25ED4F7100E91380 /* DesignCode 1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DesignCode 1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -62,8 +64,9 @@
 		70A7179125ED4F7100E91380 /* DesignCode 1 */ = {
 			isa = PBXGroup;
 			children = (
-				70A7179225ED4F7100E91380 /* DesignCode_1App.swift */,
+				701E9A1625EF8B2D00D81FA2 /* UpdateStore.swift */,
 				70AB977325EE46D6003D5EB2 /* View */,
+				70A7179225ED4F7100E91380 /* DesignCode_1App.swift */,
 				70A7179625ED4F7200E91380 /* Assets.xcassets */,
 				70A7179B25ED4F7200E91380 /* Info.plist */,
 				70A7179825ED4F7200E91380 /* Preview Content */,
@@ -165,6 +168,7 @@
 				70A7179525ED4F7100E91380 /* ContentView.swift in Sources */,
 				70AB977925EE4D7C003D5EB2 /* Home.swift in Sources */,
 				708762AD25EF727F003144C5 /* UpdateList.swift in Sources */,
+				701E9A1725EF8B2D00D81FA2 /* UpdateStore.swift in Sources */,
 				70AB977625EE46E5003D5EB2 /* MenuView.swift in Sources */,
 				70201C8325EF5898007C0875 /* HomeView.swift in Sources */,
 				70A7179325ED4F7100E91380 /* DesignCode_1App.swift in Sources */,
