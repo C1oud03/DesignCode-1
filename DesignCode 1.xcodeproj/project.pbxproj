@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		701817B825F0DB1100C58888 /* RingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 701817B725F0DB1100C58888 /* RingView.swift */; };
 		701E9A1425EF87E400D81FA2 /* UpdateDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 701E9A1325EF87E400D81FA2 /* UpdateDetail.swift */; };
 		701E9A1725EF8B2D00D81FA2 /* UpdateStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 701E9A1625EF8B2D00D81FA2 /* UpdateStore.swift */; };
 		701E9A1C25EF905800D81FA2 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 701E9A1B25EF905800D81FA2 /* TabBar.swift */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		701817B725F0DB1100C58888 /* RingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingView.swift; sourceTree = "<group>"; };
 		701E9A1325EF87E400D81FA2 /* UpdateDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateDetail.swift; sourceTree = "<group>"; };
 		701E9A1625EF8B2D00D81FA2 /* UpdateStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateStore.swift; sourceTree = "<group>"; };
 		701E9A1B25EF905800D81FA2 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 			children = (
 				70A7179425ED4F7100E91380 /* ContentView.swift */,
 				70AB977525EE46E5003D5EB2 /* MenuView.swift */,
+				701817B725F0DB1100C58888 /* RingView.swift */,
 				70AB977825EE4D7C003D5EB2 /* Home.swift */,
 				70201C8225EF5898007C0875 /* HomeView.swift */,
 				708762AC25EF727F003144C5 /* UpdateList.swift */,
@@ -167,6 +170,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				701817B825F0DB1100C58888 /* RingView.swift in Sources */,
 				701E9A1C25EF905800D81FA2 /* TabBar.swift in Sources */,
 				701E9A1425EF87E400D81FA2 /* UpdateDetail.swift in Sources */,
 				70A7179525ED4F7100E91380 /* ContentView.swift in Sources */,
