@@ -13,6 +13,7 @@ struct RingView: View {
     @State var width: CGFloat = 300
     @State var height: CGFloat = 300
     @State var percent: CGFloat = 88
+    @Binding var show: Bool
     
     var body: some View {
         let multiplier = width / 44
@@ -27,7 +28,7 @@ struct RingView: View {
                 .frame(width: width, height: height)
             
             Circle()
-                .trim(from: progress, to: 1.0)
+                .trim(from: show ? progress : 1, to: 1.0)
                 .stroke(
                     LinearGradient(
                         gradient: Gradient(colors: [Color(color1), Color(color2)]),
@@ -60,6 +61,6 @@ struct RingView: View {
 
 struct RingView_Previews: PreviewProvider {
     static var previews: some View {
-        RingView()
+        RingView(show: .constant(true))
     }
 }
