@@ -205,7 +205,6 @@ struct BottomCardView: View {
                     percent: 78,
                     show: $show
                 )
-                .animation(Animation.easeInOut.delay(0.3))
                 
                 VStack(alignment: .leading, spacing: 8.0) {
                     Text("SwiftUI")
