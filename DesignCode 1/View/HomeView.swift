@@ -112,8 +112,8 @@ struct HomeView: View {
                     .offset(y: -60)
                 
                 Spacer()
-            }
-        } //: VSTACK
+            } //: VSTACK
+        } //: SCROLL VIEW
     } //: BODY
 }
 
